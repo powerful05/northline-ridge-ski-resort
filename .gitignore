@@ -1,0 +1,17 @@
+node_modules/
+target/
+dist/
+.vite/
+.superpowers/
+
+*.log
+*.pid
+*.err
+*.out
+
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db
