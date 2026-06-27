@@ -308,9 +308,11 @@ h3 {
   justify-content: flex-end;
   border: 1px solid var(--line);
   background:
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.78)),
+    linear-gradient(180deg, rgba(2, 8, 12, 0.1) 0%, rgba(2, 8, 12, 0.18) 38%, rgba(0, 0, 0, 0.86) 100%),
+    var(--panel-image) center / cover no-repeat,
     linear-gradient(135deg, rgba(174, 211, 224, 0.32), rgba(10, 19, 27, 0.9));
   clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .descent-panel span,
@@ -324,15 +326,16 @@ h3 {
 
 .descent-panel.forest {
   background:
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.82)),
-    repeating-linear-gradient(100deg, rgba(255,255,255,.08) 0 2px, transparent 2px 36px),
+    linear-gradient(180deg, rgba(2, 8, 12, 0.06) 0%, rgba(2, 8, 12, 0.2) 36%, rgba(0, 0, 0, 0.88) 100%),
+    var(--panel-image) center / cover no-repeat,
     linear-gradient(135deg, #102431, #061014);
 }
 
 .descent-panel.night {
   background:
-    radial-gradient(circle at 74% 22%, rgba(255, 90, 53, .5), transparent 12%),
-    linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.84)),
+    radial-gradient(circle at 78% 20%, rgba(255, 90, 53, .24), transparent 18%),
+    linear-gradient(180deg, rgba(2, 5, 8, 0.04) 0%, rgba(2, 5, 8, 0.2) 34%, rgba(0, 0, 0, 0.88) 100%),
+    var(--panel-image) center / cover no-repeat,
     linear-gradient(135deg, #09131f, #020507);
 }
 
@@ -357,6 +360,12 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(2, 7, 10, 0.1) 0%, rgba(2, 7, 10, 0.24) 42%, rgba(0, 0, 0, 0.9) 100%),
+    var(--item-image) center / cover no-repeat,
+    var(--glass);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
 
 .booking {

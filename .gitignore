@@ -3,6 +3,7 @@ target/
 dist/
 .vite/
 .superpowers/
+.venv/
 
 *.log
 *.pid

@@ -1,5 +1,12 @@
 import './styles.css';
 import { initAnimations } from './animations';
+import blackPineImage from './assets/descent-black-pine.png';
+import nightLineImage from './assets/descent-night-line.png';
+import summitDawnImage from './assets/descent-summit-dawn.png';
+import dawnLiftImage from './assets/resort-dawn-lift.png';
+import snowGuideImage from './assets/resort-snow-guide.png';
+import snowlineChaletImage from './assets/resort-snowline-chalet.png';
+import trailWindGateImage from './assets/resort-trail-wind-gate.png';
 
 export function renderApp() {
   const app = document.querySelector<HTMLDivElement>('#app');
@@ -59,17 +66,17 @@ export function renderApp() {
             <h2 id="descent-title">从山脊到灯线，一次滚动完成整段下滑。</h2>
           </div>
           <div class="descent-track" data-animate="descent-track">
-            <article class="descent-panel summit">
+            <article class="descent-panel summit" style="--panel-image: url('${summitDawnImage}')">
               <span>01 / Summit</span>
               <h3>破晓山顶</h3>
               <p>雪面还未被切开，向导在风口确认第一条线路。</p>
             </article>
-            <article class="descent-panel forest">
+            <article class="descent-panel forest" style="--panel-image: url('${blackPineImage}')">
               <span>02 / Black pine</span>
               <h3>黑松林穿越</h3>
               <p>林线遮住横风，粉雪在转弯后扬成银色尾流。</p>
             </article>
-            <article class="descent-panel night">
+            <article class="descent-panel night" style="--panel-image: url('${nightLineImage}')">
               <span>03 / Night line</span>
               <h3>夜滑灯带</h3>
               <p>灯光沿坡面拉成橙色信号，最后一班缆车仍在运行。</p>
@@ -84,22 +91,22 @@ export function renderApp() {
           <h2 data-animate="reveal">雪道、木屋、缆车和向导被设计成同一个体验。</h2>
         </div>
         <div class="resort-grid">
-          <article class="resort-item" data-animate="reveal">
+          <article class="resort-item" data-animate="reveal" style="--item-image: url('${trailWindGateImage}')">
             <span>Trail</span>
             <h3>极地风口线</h3>
             <p>适合高级滑手的开放山脊，天气窗口由巡山队实时开放。</p>
           </article>
-          <article class="resort-item" data-animate="reveal">
+          <article class="resort-item" data-animate="reveal" style="--item-image: url('${snowlineChaletImage}')">
             <span>Chalet</span>
             <h3>雪线木屋</h3>
             <p>每间房面向北坡，提供烘干室、热石浴和清晨缆车接驳。</p>
           </article>
-          <article class="resort-item" data-animate="reveal">
+          <article class="resort-item" data-animate="reveal" style="--item-image: url('${dawnLiftImage}')">
             <span>Lift</span>
             <h3>黎明缆车</h3>
             <p>首班 06:20，直达山脊观景台，避开常规游客时段。</p>
           </article>
-          <article class="resort-item" data-animate="reveal">
+          <article class="resort-item" data-animate="reveal" style="--item-image: url('${snowGuideImage}')">
             <span>Guide</span>
             <h3>风雪向导</h3>
             <p>小队制带滑，根据雪况选择粉雪、林间或夜滑线路。</p>

@@ -31,4 +31,34 @@ describe('ski resort homepage', () => {
     expect(document.querySelector('[data-booking="lodging"]')?.textContent).toContain('雪线木屋');
     expect(document.body.textContent).toContain('减少动态效果');
   });
+
+  test('uses real route photography for the scroll descent panels', () => {
+    document.body.innerHTML = '<div id="app"></div>';
+
+    renderApp();
+
+    const panels = Array.from(document.querySelectorAll<HTMLElement>('.descent-panel'));
+
+    expect(panels).toHaveLength(3);
+    const imageUrls = panels.map((panel) => panel.style.getPropertyValue('--panel-image'));
+
+    expect(imageUrls[0]).toContain('descent-summit-dawn.png');
+    expect(imageUrls[1]).toContain('descent-black-pine.png');
+    expect(imageUrls[2]).toContain('descent-night-line.png');
+  });
+
+  test('uses real resort photography for the system cards', () => {
+    document.body.innerHTML = '<div id="app"></div>';
+
+    renderApp();
+
+    const cards = Array.from(document.querySelectorAll<HTMLElement>('.resort-item'));
+    const imageUrls = cards.map((card) => card.style.getPropertyValue('--item-image'));
+
+    expect(cards).toHaveLength(4);
+    expect(imageUrls[0]).toContain('resort-trail-wind-gate.png');
+    expect(imageUrls[1]).toContain('resort-snowline-chalet.png');
+    expect(imageUrls[2]).toContain('resort-dawn-lift.png');
+    expect(imageUrls[3]).toContain('resort-snow-guide.png');
+  });
 });
